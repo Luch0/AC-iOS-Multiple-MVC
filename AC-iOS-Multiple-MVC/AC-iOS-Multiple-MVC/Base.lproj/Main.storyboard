@@ -5,6 +5,9 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,12 +48,61 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Custom Animal Cell" rowHeight="201" id="SRF-QO-qae" customClass="CustomAnimalTableViewCell" customModule="AC_iOS_Multiple_MVC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="201"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SRF-QO-qae" id="ch7-sS-swR">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VKF-Ol-pYc">
+                                                    <rect key="frame" x="0.0" y="8" width="187.5" height="187.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="VKF-Ol-pYc" secondAttribute="height" multiplier="1:1" id="JdB-UF-0WC"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PRa-Mr-LKG">
+                                                    <rect key="frame" x="187.5" y="8" width="187.5" height="187.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0T-HV-es8">
+                                                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEa-DJ-bi5" userLabel="Class &amp; Origin">
+                                                            <rect key="frame" x="0.0" y="20.5" width="187.5" height="167"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="PRa-Mr-LKG" secondAttribute="trailing" id="4BO-9G-Id7"/>
+                                                <constraint firstItem="VKF-Ol-pYc" firstAttribute="width" secondItem="ch7-sS-swR" secondAttribute="width" multiplier="0.5" id="8UN-Ij-Dqr"/>
+                                                <constraint firstItem="VKF-Ol-pYc" firstAttribute="height" secondItem="PRa-Mr-LKG" secondAttribute="height" id="KaI-0z-g2T"/>
+                                                <constraint firstItem="VKF-Ol-pYc" firstAttribute="width" secondItem="PRa-Mr-LKG" secondAttribute="width" id="Odp-9S-lCT"/>
+                                                <constraint firstItem="VKF-Ol-pYc" firstAttribute="trailing" secondItem="PRa-Mr-LKG" secondAttribute="leading" id="QXT-cJ-5l1"/>
+                                                <constraint firstItem="VKF-Ol-pYc" firstAttribute="top" secondItem="ch7-sS-swR" secondAttribute="topMargin" id="ZA6-zV-2w0"/>
+                                                <constraint firstItem="PRa-Mr-LKG" firstAttribute="centerY" secondItem="ch7-sS-swR" secondAttribute="centerY" id="gt4-Yi-b9H"/>
+                                                <constraint firstItem="PRa-Mr-LKG" firstAttribute="width" secondItem="ch7-sS-swR" secondAttribute="width" multiplier="0.5" id="twB-2W-s0q"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VKF-Ol-pYc" secondAttribute="bottom" id="ugx-B6-p17"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="animalImage" destination="VKF-Ol-pYc" id="yeL-hd-gJK"/>
+                                            <outlet property="animalName" destination="y0T-HV-es8" id="SaY-GZ-ncO"/>
+                                            <outlet property="classificationAndOrigin" destination="XEa-DJ-bi5" id="U7i-ZQ-7yh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="oRw-S9-N6a" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="0r7-rw-UTe"/>
+                            <constraint firstItem="oRw-S9-N6a" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="0r7-rw-UTe"/>
                             <constraint firstItem="oRw-S9-N6a" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="a2z-Hl-Irn"/>
                             <constraint firstItem="oRw-S9-N6a" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ftJ-fy-dgn"/>
                             <constraint firstItem="oRw-S9-N6a" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="qVj-Ct-9Kq"/>
@@ -63,6 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>

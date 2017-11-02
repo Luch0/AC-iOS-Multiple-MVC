@@ -32,10 +32,14 @@ class ZooViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let animal = zooData[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Animal Cell", for: indexPath)
-        cell.textLabel?.text = animal.name
-        cell.detailTextLabel?.text = animal.info
-        cell.imageView?.image = UIImage(named: String(animal.imageNumber))
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Custom Animal Cell", for: indexPath)
+        if let cell = cell as? CustomAnimalTableViewCell {
+            cell.animalName?.text = animal.name
+            cell.classificationAndOrigin?.text = animal.classification + " - " + animal.origin
+            cell.animalImage?.image = UIImage(named: String(animal.imageNumber))
+            return cell
+            
+        }
         return cell
     }
     
