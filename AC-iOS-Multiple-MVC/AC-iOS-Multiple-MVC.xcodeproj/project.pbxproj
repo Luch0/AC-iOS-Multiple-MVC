@@ -14,6 +14,7 @@
 		DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */; };
 		E27975251FABA1C9000ADA9D /* ZooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27975241FABA1C9000ADA9D /* ZooViewController.swift */; };
 		E2E7AF481FABA77B00A519AE /* CustomAnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E7AF471FABA77B00A519AE /* CustomAnimalTableViewCell.swift */; };
+		E2FBEF721FABB692005EEE80 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2FBEF711FABB692005EEE80 /* DetailedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAnimal.swift; sourceTree = "<group>"; };
 		E27975241FABA1C9000ADA9D /* ZooViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooViewController.swift; sourceTree = "<group>"; };
 		E2E7AF471FABA77B00A519AE /* CustomAnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimalTableViewCell.swift; sourceTree = "<group>"; };
+		E2FBEF711FABB692005EEE80 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,7 @@
 		DE07F55D1FAB611300DA3ABA /* AC-iOS-Multiple-MVC */ = {
 			isa = PBXGroup;
 			children = (
-				E27975241FABA1C9000ADA9D /* ZooViewController.swift */,
+				E2FBEF731FABB69C005EEE80 /* ViewControllers */,
 				DE07F5701FAB627600DA3ABA /* ZooAnimal.swift */,
 				E2E7AF471FABA77B00A519AE /* CustomAnimalTableViewCell.swift */,
 				DE07F5621FAB611300DA3ABA /* Main.storyboard */,
@@ -76,6 +78,15 @@
 				DE07F5671FAB611300DA3ABA /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2FBEF731FABB69C005EEE80 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E27975241FABA1C9000ADA9D /* ZooViewController.swift */,
+				E2FBEF711FABB692005EEE80 /* DetailedViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 			files = (
 				DE07F5711FAB627600DA3ABA /* ZooAnimal.swift in Sources */,
 				DE07F55F1FAB611300DA3ABA /* AppDelegate.swift in Sources */,
+				E2FBEF721FABB692005EEE80 /* DetailedViewController.swift in Sources */,
 				E2E7AF481FABA77B00A519AE /* CustomAnimalTableViewCell.swift in Sources */,
 				E27975251FABA1C9000ADA9D /* ZooViewController.swift in Sources */,
 			);

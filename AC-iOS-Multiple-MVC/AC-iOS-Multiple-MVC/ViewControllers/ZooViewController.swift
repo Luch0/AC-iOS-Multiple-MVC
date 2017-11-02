@@ -49,14 +49,17 @@ class ZooViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
+     if let destination = segue.destination as? DetailedViewController {
+     let selectedRow = animalTableView.indexPathForSelectedRow!.row
+     let selectedAnimal = self.zooData[selectedRow]
+     destination.animal = selectedAnimal
+     }
         // Pass the selected object to the new view controller.
     }
-    */
 
 }
